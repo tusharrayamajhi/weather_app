@@ -30,7 +30,6 @@ async function weather_data(city: string) {
     try{
       e.preventDefault();
       const result = await weather_data(city)
-      console.log(result)
       setDAta({
         city: result.location.name,
         country: result.location.country,
