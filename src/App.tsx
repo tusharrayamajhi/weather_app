@@ -1,18 +1,15 @@
 
-// const url = "https://api.weatherapi.com/v1/current.json?q=BUTWAL&lang=ENGLISH&key=6d4376a01c62406ab8220123242503"
 import axios from "axios"
 import React from "react";
 import { useState } from "react";
-// import process from "process";
+
+import { API_URL } from "./api-config";
+
 async function weather_data(city: string) {
-  const API_KEY = process.env.REACT_APP_API_KEY;
-    const data = await axios.get(`https://api.weatherapi.com/v1/current.json?q=${city}&lang=ENGLISH&key=${API_KEY}`);
+    const data = await axios.get(`https://api.weatherapi.com/v1/current.json?q=${city}&lang=ENGLISH&key=${API_URL}`);
     return data.data
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    
   }
   function App() {
-  // console.log(process.env.REACT_APP_WEATHER_API)
   const [errs,setErrs] = useState(false);
   const [city, setCity] = useState("butwal");
   const [data, setDAta] = useState({
