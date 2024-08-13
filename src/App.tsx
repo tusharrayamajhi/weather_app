@@ -62,7 +62,7 @@ async function weather_data(city: string) {
             <label className="block text-black text-sm font-bold mb-2" htmlFor="username">
               City Name
             </label>
-            <input value={city} onChange={handelchange} className="shadow-md appearance-none border rounded w-[100%] py-2 px-3  leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" />
+            <input value={city} onChange={handelchange} className="shadow-md appearance-none border rounded w-[100%] py-2 px-3  leading-tight focus:outline-none focus:shadow-outline " required id="username" type="text" placeholder="Username" />
             {errs?<p className="text-red-500">no such city found</p>:<p className="text-green-500">found</p>}
             <button className="mt-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">Search</button>
           </div>
